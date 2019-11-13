@@ -28,18 +28,18 @@ buoy49 @ machine ~/work/electrical-circuit
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
 [INFO] --- build-helper-maven-plugin:1.7:add-source (add-source) @ electrical-circuit ---
-[INFO] Source directory: /Users/brianwitte/work/electrical-circuit/src/main/generated-sources added.
+[INFO] Source directory: /Users/buoy49/work/electrical-circuit/src/main/generated-sources added.
 [INFO]
 [INFO] --- antlr4-maven-plugin:4.1:antlr4 (default) @ electrical-circuit ---
-[INFO] ANTLR 4: Processing source directory /Users/brianwitte/work/electrical-circuit/src/main/java
+[INFO] ANTLR 4: Processing source directory /Users/buoy49/work/electrical-circuit/src/main/java
 [INFO] Processing grammar: com/technik/circuit/Calculate.g4
 [INFO]
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ electrical-circuit ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/brianwitte/work/electrical-circuit/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/buoy49/work/electrical-circuit/src/main/resources
 [INFO]
 [INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ electrical-circuit ---
-[INFO] Compiling 6 source files to /Users/brianwitte/work/electrical-circuit/target/classes
+[INFO] Compiling 8 source files to /Users/buoy49/work/electrical-circuit/target/classes
 [INFO]
 [INFO] >>> exec-maven-plugin:1.2.1:java (default-cli) > validate @ electrical-circuit >>>
 [INFO]
@@ -63,75 +63,76 @@ expression:
     powExpression:
       signedAtom:
         atom:
-          variable:R1
+          variable: R1
   +
   multiplyingExpression:
     powExpression:
       signedAtom:
         atom:
-          variable:L1
+          variable: L1
   +
   multiplyingExpression:
     powExpression:
       signedAtom:
         atom:
-          variable:C1
+          variable: C1
   +
   multiplyingExpression:
     powExpression:
       signedAtom:
-        atom:(
+        atom: (
           expression:
             multiplyingExpression:
               powExpression:
                 signedAtom:
-                  atom:(
+                  atom: (
                     expression:
                       multiplyingExpression:
                         powExpression:
                           signedAtom:
-                            atom:(
+                            atom: (
                               expression:
                                 multiplyingExpression:
                                   powExpression:
                                     signedAtom:
                                       atom:
-                                        variable:R2
+                                        variable: R2
                                   *
                                   powExpression:
                                     signedAtom:
                                       atom:
-                                        variable:L2
+                                        variable: L2
                               )
                       +
                       multiplyingExpression:
                         powExpression:
                           signedAtom:
                             atom:
-                              variable:C2
+                              variable: C2
                       +
                       multiplyingExpression:
                         powExpression:
                           signedAtom:
                             atom:
-                              variable:R3
+                              variable: R3
                     )
               *
               powExpression:
                 signedAtom:
                   atom:
-                    variable:R4
+                    variable: R4
           )
   +
   multiplyingExpression:
     powExpression:
       signedAtom:
         atom:
-          variable:L3
+          variable: L3
   +
   multiplyingExpression:
     powExpression:
       signedAtom:
         atom:
-          variable:C3
+          variable: C3
+
 ```

@@ -36,7 +36,7 @@ public class TreeUtils {
         sb.append(lead(level));
         level++;
         String s = Utils.escapeWhitespace(Trees.getNodeText(t, ruleNames), false);
-        sb.append(s + ':');
+        sb.append(s + ": ");
         for (int i = 0; i < t.getChildCount(); i++) {
             sb.append(process(t.getChild(i), ruleNames));
         }
