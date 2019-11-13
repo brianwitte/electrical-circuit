@@ -3,7 +3,9 @@ package com.technik.circuit;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.gui.TreeViewer;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -34,6 +36,17 @@ public class App {
             nestedTree.append(prettyTree);
             System.out.println(nestedTree);
 
+
+            // this code opens GUI
+            JFrame frame = new JFrame("Equation Tree viewer");
+            JPanel panel = new JPanel();
+            TreeViewer viewer = new TreeViewer(Arrays.asList(parser.getRuleNames()), tree);
+            viewer.setScale(0.8);
+            panel.add(viewer);
+            frame.add(panel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(800,600);
+            frame.setVisible(true);
 
         } catch (Exception e) {
             System.out.println(e);
